@@ -22,24 +22,31 @@ function fixerPath(pathFile) {
 
 
 function readMD(pathFile) {
+
     const links = []; //Crea arreglo donde se almacenarán los links del archivo
     const readAllMD = fs.readFileSync(pathFile, 'utf-8'); //Metodo para leer el archivo md de forma sincrona
 
     console.log(readAllMD);
     console.log("Terminó archivo");
-
     const fileMDtoHTML = markedHTML(readAllMD); //Transforma el texto md en formato html
     const tempDom = new JSDOM(`<!DOCTYPE html>${fileMDtoHTML}`); //Crea DOM temporal para obtener los links
     tempDom.window.document.querySelectorAll('a').forEach((linkinHTML) => {// ciclo para obtener los links
         const getHref = linkinHTML.getAttribute('href');
         const getText = linkinHTML.innerHTML;
         const getFile = pathFile;
-        
-        links.push({ getHref, getText, getFile });
+
+        links.push({
+            getHref,
+            getText: getText,
+            getFile: getFile,
+        });
     });
 
     return links;
 }
+
+//module.exports = getLinks;
+
 
 
 //funcion mdlinks
@@ -49,13 +56,18 @@ function mdlinks(pathFile, options) {
     } else {
         const fixPath = fixerPath(pathFile); // coje la funcion que transforma la ruta en absoluta
         console.log(fixPath);
-
+  
         let linksInMD = readMD(fixPath); // guarda en un arreglo los links que se encuentran en el archivo, e imprime los validos.
         linksInMD.forEach(link => {
             console.log("link: " + link.getHref);
         });
     }
-}
+  }
+  
+  
+  mdlinks(direccion, null);
+  
 
 
-mdlinks(direccion, null);
+
+
