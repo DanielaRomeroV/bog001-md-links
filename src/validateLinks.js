@@ -1,32 +1,34 @@
 const fetch = require('node-fetch');
 
-//peticion http con fetch
-
-/*
-fetch(url) // 1
-.then(response => response.json()) // 2
-.then(console.log) // 3
-.catch(console.log('Algo salió mal.'));*/
-
-const validateLinks = arrayLinks => {
-
-    let validated = arrayLinks.map( link => {
- 
-      return fetch(link.href)
-      .then(resp => {
-          link.statusCode = resp.status;
-          link.response = resp.statusText;
- 
-          return link;
- 
-      }).catch(error => {
-        link.statusCode = 500;
-        link.response = 'FAILED';
- 
-        return link;
-      })
+//Funcion que valida los links
+const validateLinks = (AllLinks)=>{
+  let validatedLinks = AllLinks.map(link => {
+    return fetch(link.getHref).then(response => {
+      link.statusCode = response.status;
+      link.statusDesc = 'SUCCESS';
+      console.log("codigo: "+link.statusCode);
+          console.log("respuesta: "+link.statusDesc);
+          console.log(Object.values(link));
+      return link;
+    }).catch(error => {
+      let status = 500;
+      if (error.response) {
+        status = error.response.status;// Respuesta de error interno del servidor
+      }
+      if (error.request) {
+        status = 503; // Respuesta de error servidor ocupado
+      }
+      link.statusCode = status;
+      link.statusDesc = 'FAILED';
+      console.log("codigo: "+link.statusCode);
+          console.log("respuesta: "+link.statusDesc);
+          console.log(Object.values(link));
+      return link;
     });
-    return Promise.all(validated).then(resp => resp);
- };
- 
- module.exports = validateLinks;
+
+  });
+
+  return Promise.all(validatedLinks).then(response => response);
+}
+
+module.exports = validateLinks;
