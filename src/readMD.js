@@ -12,18 +12,16 @@ const readMD =(pathFile) =>{
 
     console.log(readAllMD);
     console.log("Terminó archivo");
+
     const fileMDtoHTML = markedHTML(readAllMD); //Transforma el texto md en formato html
     const tempDom = new JSDOM(`<!DOCTYPE html>${fileMDtoHTML}`); //Crea DOM temporal para obtener los links
+
     tempDom.window.document.querySelectorAll('a').forEach((linkinHTML) => {// ciclo para obtener los links
         const getHref = linkinHTML.getAttribute('href');
         const getText = linkinHTML.innerHTML;
         const getFile = pathFile;
 
-        links.push({
-            getHref,
-            getText: getText,
-            getFile: getFile,
-        });
+        links.push({ getHref, getText, getFile, });
     });
 
     return links;
