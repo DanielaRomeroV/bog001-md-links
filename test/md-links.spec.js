@@ -1,5 +1,7 @@
-const mdLinks = require('../');
+const mdLinks = require('../index');
 const path = require('path');
+
+
 
 
 describe('mdLinks', () => {
@@ -8,7 +10,7 @@ describe('mdLinks', () => {
     const mockFile = path.resolve('.test/mock.md');
 
    return mdLinks(mockFile).then(links => {
-    expect(links.length).toBe(3);
+    expect(links.length).toBe(2);
     expect(links[0]).toEqual({
       href: 'https://es.wikipedia.org/wiki/Markdown',
       text: 'Markdown',
@@ -18,7 +20,4 @@ describe('mdLinks', () => {
 });
 
 
-
-//funcion que valida la extension
-//funcion que vuelve rutas a absolutas
 

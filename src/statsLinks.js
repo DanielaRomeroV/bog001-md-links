@@ -1,5 +1,5 @@
 //Funcion que valida las estadisticas de los links
-/*
+
 const statsLinks = (AllLinks = []) => {
 
   let unique = new Set(AllLinks.map(link => link.getHref));
@@ -17,4 +17,4 @@ const statsLinks = (AllLinks = []) => {
   return stats;
 }
 
-module.exports = statsLinks;*/
+module.exports = statsLinks;
