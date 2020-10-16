@@ -2,9 +2,11 @@
   "name": "@DanielaRomeroV/md-links",
   "version": "0.1.0",
   "dependencies": {
+    "axios": "^0.20.0",
     "jsdom": "^16.4.0",
     "marked": "^1.1.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "xmlhttprequest": "^1.8.0"
   },
   "scripts": {
     "test": "jest --coverage"
@@ -15,5 +17,8 @@
   },
   "devDependencies": {
     "jest": "^26.4.2"
+  },
+  "bin": {
+    "mdLinks": "./cli.js"
   }
 }
