@@ -49,7 +49,7 @@ const options = {
     stats: false
 }
 
-mdlinks(direction, options);
+//mdlinks(direction, options);
 
 
 module.exports = mdlinks;
