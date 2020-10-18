@@ -16,7 +16,8 @@
     "url": "git+https://github.com/DanielaRomeroV/bog001-md-links.git"
   },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "yargs": "^16.1.0"
   },
   "bin": {
     "mdLinks": "./cli.js"
