@@ -45,8 +45,8 @@ const mdlinks = (pathFile, options) => {
 
 
 const options = {
-    validate: true,
-    stats: false
+    validate: false,
+    stats: true
 }
 
 //mdlinks(direction, options);

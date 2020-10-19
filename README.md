@@ -39,7 +39,77 @@ algunas estadísticas.
 
 ## 3. Instalación
 
+Instalar como modulo
 
+$ npm install DanielaRomeroV/bog001-md-links
+
+Instalar CLI
+
+$ npm install -g DanielaRomeroV/md-links
+
+## 4. Uso del modulo
+
+const mdlinks = require('@DanielaRomeroV/md-links');
+
+Ejemplo.
+
+Leer archivo md y mostrar todos los links
+
+```
+$  node cli.js src/carpeta1/PRUEBA.md
+C:\Users\Asus\Documents\bog001-md-links\src\carpeta1\PRUEBA.md
+Holi esto es una prueba
+https://es.wikipedia.orgn/
+https://www.npmjs.com/package/jsdom
+Terminó archivo
+link: https://es.wikipedia.orgn/
+link: https://www.npmjs.com/package/jsdom
+PS C:\Users\Asus\Documents\bog001-md-links> 
+```
+
+Validar
+
+````
+$ node cli.js src/carpeta1/PRUEBA.md --validate
+ink: https://es.wikipedia.orgn/
+link: https://www.npmjs.com/package/jsdom
+codigo: 500
+respuesta: FAILED
+[
+  'https://es.wikipedia.orgn/',
+  'https://es.wikipedia.orgn/',
+  'C:\\Users\\Asus\\Documents\\bog001-md-links\\src\\carpeta1\\PRUEBA.md',
+  500,
+  'FAILED'
+]
+codigo: 200
+respuesta: SUCCESS
+[
+  'https://www.npmjs.com/package/jsdom',
+  'https://www.npmjs.com/package/jsdom',
+  'C:\\Users\\Asus\\Documents\\bog001-md-links\\src\\carpeta1\\PRUEBA.md',
+  200,
+  'SUCCESS'
+]
+````
+
+Estadisticas de los links 
+
+````
+$ node cli.js src/carpeta1/PRUEBA.md --stats
+link: https://es.wikipedia.orgn/
+link: https://www.npmjs.com/package/jsdom
+[ 2, 2 ]
+````
+
+Validar y estadisticas.
+
+````
+$ node cli.js src/carpeta1/PRUEBA.md --validate --stats
+link: https://es.wikipedia.orgn/
+link: https://www.npmjs.com/package/jsdom
+[ 2, 2, 1 ]
+````
 
 ### JavaScript
 
