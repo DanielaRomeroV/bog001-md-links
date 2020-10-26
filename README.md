@@ -169,7 +169,7 @@ link: https://www.npmjs.com/package/jsdom
 
 ### General
 
-* [ ] Puede instalarse via `npm install --global <github-user>/md-links`
+* [x] Puede instalarse via `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
