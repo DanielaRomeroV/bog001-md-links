@@ -10,8 +10,6 @@ const readMD =(pathFile) =>{
     const links = []; //Crea arreglo donde se almacenarán los links del archivo
     const readAllMD = fs.readFileSync(pathFile, 'utf-8'); //Metodo para leer el archivo md de forma sincrona
 
-    console.log(readAllMD);
-    console.log("Terminó archivo");
 
     const fileMDtoHTML = markedHTML(readAllMD); //Transforma el texto md en formato html
     const tempDom = new JSDOM(`<!DOCTYPE html>${fileMDtoHTML}`); //Crea DOM temporal para obtener los links

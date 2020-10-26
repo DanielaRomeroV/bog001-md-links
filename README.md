@@ -121,7 +121,7 @@ link: https://www.npmjs.com/package/jsdom
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 * [ ] Diferenciar entre expression y statements.
 * [x] Diferenciar entre tipos de datos atómicos y estructurados.
-* [x] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
+* [ ] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
 * [x] [Consumo de Promesas.](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
 * [x] [Creación de Promesas.](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
 
@@ -157,7 +157,7 @@ link: https://www.npmjs.com/package/jsdom
 
 ### HTTP
 
-* [ ] Verbos HTTP ([http.get](https://nodejs.org/api/http.html#http_http_get_options_callback))
+* [x] Verbos HTTP ([http.get](https://nodejs.org/api/http.html#http_http_get_options_callback))
 
 ### Fundamentos de programación
 
@@ -173,26 +173,26 @@ link: https://www.npmjs.com/package/jsdom
 
 ### `README.md`
 
-* [ ] Un board con el backlog para la implementación de la librería.
-* [ ] Documentación técnica de la librería.
-* [ ] Guía de uso e instalación de la librería
+* [x] Un board con el backlog para la implementación de la librería.
+* [x] Documentación técnica de la librería.
+* [x] Guía de uso e instalación de la librería
 
 ### API `mdLinks(path, opts)`
 
-* [ ] El módulo exporta una función con la interfaz (API) esperada.
-* [ ] Implementa soporte para archivo individual
+* [x] El módulo exporta una función con la interfaz (API) esperada.
+* [x] Implementa soporte para archivo individual
 * [ ] Implementa soporte para directorios
-* [ ] Implementa `options.validate`
+* [x] Implementa `options.validate`
 
 ### CLI
 
-* [ ] Expone ejecutable `md-links` en el path (configurado en `package.json`)
-* [ ] Se ejecuta sin errores / output esperado
-* [ ] Implementa `--validate`
-* [ ] Implementa `--stats`
+* [x] Expone ejecutable `md-links` en el path (configurado en `package.json`)
+* [x] Se ejecuta sin errores / output esperado
+* [x] Implementa `--validate`
+* [x] Implementa `--stats`
 
 ### Pruebas / tests
 
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions,
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions,
   lines, y branches.
-* [ ] Pasa tests (y linters) (`npm test`).
+* [x] Pasa tests (y linters) (`npm test`).

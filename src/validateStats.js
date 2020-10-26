@@ -6,8 +6,9 @@ const validateStats = (AllLinks) => {
   
   let unique = [];//guarda el tamaño de los links que obtuvo
 
-  AllLinks.forEach(link => unique.push(link.getHref));// unique se llena con el parametro link.getHref
+  AllLinks.forEach(link => unique.push(link.getHref));// unique se llena con el parametro link.getHref 
   let stats = [AllLinks.length, unique.length];//llenamos el arreglo stats con ambos parametros
+  
   let broken = 0;//contador que nos va a decir cuantos links estan rotos
 
   AllLinks.forEach(link => {
@@ -24,7 +25,7 @@ const validateStats = (AllLinks) => {
 
   stats.push(broken);
   console.log(Object.values(stats));//imprimo todos los parametros del objeto
-  
+
   return stats;
 }
 

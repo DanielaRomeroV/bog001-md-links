@@ -15,18 +15,14 @@ const validateLinks = (AllLinks)=> {//recibe el objeto alllinks
       return link;
     }).catch(error => {
       let status = 500;
-      if (error.response) {
-        status = error.response.status;// Respuesta de error interno del servidor
-      }
-      if (error.request) {
-        status = 503; // Respuesta de error servidor ocupado
-      }
-      
+            
       link.statusCode = status;
       link.statusDesc = 'FAILED';
+
       console.log("codigo: "+link.statusCode);
           console.log("respuesta: "+link.statusDesc);
           console.log(Object.values(link));
+          
       return link;
     });
 

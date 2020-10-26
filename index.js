@@ -5,7 +5,7 @@ const validateLinks = require('./src/validateLinks.js');
 const validateStats = require('./src/validateStats');
 const statsLinks = require('./src/statsLinks.js');
 const path = require('path');
-//const direction = 'src/carpeta1/PRUEBA.md';
+
 
 
 //funcion mdlinks
@@ -15,7 +15,6 @@ const mdlinks = (pathFile, options) => {
         let linksInMD = [];//arreglo donde guardamos todo el objeto
         
         if (!validatePath(pathFile)) {
-            console.log("No es archivo md"); // valida extension archivo
             reject(console.log("No es archivo md"));
         } else {
             const fixPath = fixerPath(pathFile); // coje la funcion que transforma la ruta en absoluta
@@ -44,6 +43,15 @@ const mdlinks = (pathFile, options) => {
 };
 
 module.exports = mdlinks;
+
+
+const direction = 'src/carpeta1/PRUEBA.md';
+    const options = {
+      validate: true,
+      stats: true
+    };
+
+    mdlinks(direction, options);
 
 
 
