@@ -21,7 +21,7 @@ const readMD =(pathFile) =>{
         const getText = linkinHTML.innerHTML;
         const getFile = pathFile;
 
-        links.push({ getHref, getText, getFile, });
+        links.push({ getHref, getText, getFile, });//agrega estos atributos al arreglo links
     });
 
     return links;

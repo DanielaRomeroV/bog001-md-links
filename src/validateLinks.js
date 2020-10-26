@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
 
 //Funcion que valida los links
-const validateLinks = (AllLinks)=> {
-  let validatedLinks = AllLinks.map(link => {
+const validateLinks = (AllLinks)=> {//recibe el objeto alllinks
+  let validatedLinks = AllLinks.map(link => { //por cada link tiene que hacer peticion de fetch
       return fetch(link.getHref).then(response => { //consulta HTTP
 
       link.statusCode = response.status;
@@ -10,7 +10,8 @@ const validateLinks = (AllLinks)=> {
 
       console.log("codigo: "+link.statusCode);
       console.log("respuesta: "+link.statusDesc);
-      console.log(Object.values(link));
+      console.log(Object.values(link));//imprime todos los parametros del objeto links
+      
       return link;
     }).catch(error => {
       let status = 500;
@@ -31,7 +32,7 @@ const validateLinks = (AllLinks)=> {
 
   });
 
-  return Promise.all(validatedLinks).then(response => response);
+  return Promise.all(validatedLinks).then(response => response);//respuesta de las promesas que creamos con fetch
 }
 
 module.exports = validateLinks;

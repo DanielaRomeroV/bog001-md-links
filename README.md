@@ -56,7 +56,7 @@ Ejemplo.
 Leer archivo md y mostrar todos los links
 
 ```
-$  node cli.js src/carpeta1/PRUEBA.md
+$  mdLinks src/carpeta1/PRUEBA.md  
 C:\Users\Asus\Documents\bog001-md-links\src\carpeta1\PRUEBA.md
 Holi esto es una prueba
 https://es.wikipedia.orgn/
@@ -70,7 +70,7 @@ PS C:\Users\Asus\Documents\bog001-md-links>
 Validar
 
 ````
-$ node cli.js src/carpeta1/PRUEBA.md --validate
+$ mdLinks src/carpeta1/PRUEBA.md --validate
 ink: https://es.wikipedia.orgn/
 link: https://www.npmjs.com/package/jsdom
 codigo: 500
@@ -96,7 +96,7 @@ respuesta: SUCCESS
 Estadisticas de los links 
 
 ````
-$ node cli.js src/carpeta1/PRUEBA.md --stats
+$ mdLinks src/carpeta1/PRUEBA.md --stats 
 link: https://es.wikipedia.orgn/
 link: https://www.npmjs.com/package/jsdom
 [ 2, 2 ]
@@ -105,7 +105,7 @@ link: https://www.npmjs.com/package/jsdom
 Validar y estadisticas.
 
 ````
-$ node cli.js src/carpeta1/PRUEBA.md --validate --stats
+$ mdLinks src/carpeta1/PRUEBA.md --validate --stats
 link: https://es.wikipedia.orgn/
 link: https://www.npmjs.com/package/jsdom
 [ 2, 2, 1 ]
@@ -113,30 +113,30 @@ link: https://www.npmjs.com/package/jsdom
 
 ### 5. JavaScript
 
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Manipular arrays (filter | map | sort | reduce)
-* [ ] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [x] Uso de condicionales (if-else | switch | operador ternario)
+* [x] Uso de funciones (parámetros | argumentos | valor de retorno)
+* [x] Manipular arrays (filter | map | sort | reduce)
+* [x] Manipular objects (key | value)
+* [x] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 * [ ] Diferenciar entre expression y statements.
-* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
-* [ ] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
-* [ ] [Consumo de Promesas.](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
-* [ ] [Creación de Promesas.](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
+* [x] Diferenciar entre tipos de datos atómicos y estructurados.
+* [x] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
+* [x] [Consumo de Promesas.](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
+* [x] [Creación de Promesas.](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
 
 ### Node
 
-* [ ] Uso de sistema de archivos. ([fs](https://nodejs.org/api/fs.html), [path](https://nodejs.org/api/path.html))
-* [ ] Instalar y usar módulos. ([npm](https://www.npmjs.com/))
-* [ ] Creación de modules. [(CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html)
-* [ ] [Configuración de package.json.](https://docs.npmjs.com/files/package.json)
-* [ ] [Configuración de npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [ ] Uso de CLI (Command Line Interface - Interfaz de Línea de Comando)
+* [x] Uso de sistema de archivos. ([fs](https://nodejs.org/api/fs.html), [path](https://nodejs.org/api/path.html))
+* [x] Instalar y usar módulos. ([npm](https://www.npmjs.com/))
+* [x] Creación de modules. [(CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html)
+* [x] [Configuración de package.json.](https://docs.npmjs.com/files/package.json)
+* [x] [Configuración de npm-scripts](https://docs.npmjs.com/misc/scripts)
+* [x] Uso de CLI (Command Line Interface - Interfaz de Línea de Comando)
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [x] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 * [ ] [Testeo asíncrono.](https://jestjs.io/docs/es-ES/asynchronous)
 * [ ] [Uso de librerias de Mock.](https://jestjs.io/docs/es-ES/manual-mocks)
 * [ ] Uso de Mocks manuales.
@@ -144,16 +144,16 @@ link: https://www.npmjs.com/package/jsdom
 
 ### Estructura del código y guía de estilo
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+* [x] Organizar y dividir el código en módulos (Modularización)
+* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica)
 * [ ] Uso de linter (ESLINT)
 
 ### Git y GitHub
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+* [x] Uso de comandos de git (add | commit | pull | status | push)
+* [x] Manejo de repositorios de GitHub (clone | fork | gh-pages)
 * [ ] Colaboración en Github (branches | pull requests | |tags)
-* [ ] Organización en Github (projects | issues | labels | milestones)
+* [x] Organización en Github (projects | issues | labels | milestones)
 
 ### HTTP
 
